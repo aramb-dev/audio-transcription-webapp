@@ -1,24 +1,32 @@
 {
-  "name": "server",
+  "name": "audio-transcription-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Backend server for audio transcription service",
+  "main": "src/app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "aramb-dev",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "googleapis": "^144.0.0",
-    "node-fetch": "^3.3.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "googleapis": "^130.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "ytdl-core": "^4.11.5"
   },
   "devDependencies": {
-    "eslint": "^9.18.0",
-    "nodemon": "^3.1.9"
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
