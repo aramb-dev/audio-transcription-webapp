@@ -1,5 +1,5 @@
 // TranscriptionResult/TranscriptionResult.jsx
-import React from 'react';
+import React from "react";
 
 const TranscriptionResult = ({ result, error }) => {
   if (!result && !error) return null;
@@ -22,6 +22,3 @@ const TranscriptionResult = ({ result, error }) => {
 };
 
 export default TranscriptionResult;
-
-// TranscriptionResult/index.js
-export { default } from './TranscriptionResult';
