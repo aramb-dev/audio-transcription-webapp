@@ -1,51 +1,47 @@
-audio-transcription-app/
+````audio-transcription-app/
 ├── .env                    # Environment variables (REPLICATE_API_TOKEN)
-├── .gitignore
-├── package.json
-├── README.md
-│
-├── public/                 # Public assets
-│   ├── favicon.ico
-│   └── index.html
-│
+├── .gitignore             # Git ignore file
+├── package.json           # Project dependencies and scripts
+├── README.md              # Project documentation
+├── public/
+│   ├── index.html         # HTML entry point
+│   └── favicon.ico        # App favicon
 ├── src/
-│   ├── app/               # App-level configurations
-│   │   └── api/          # API route handlers
-│   │       └── transcribe.js  # Transcription API endpoint
-│   │
-│   ├── components/        # React components
-│   │   ├── ui/           # Reusable UI components
-│   │   │   ├── alert.jsx
-│   │   │   ├── button.jsx
-│   │   │   ├── card.jsx
-│   │   │   ├── input.jsx
-│   │   │   └── select.jsx
-│   │   │
-│   │   └── TranscriptionApp.jsx  # Main transcription component
-│   │
-│   ├── lib/              # Utility functions and services
-│   │   ├── replicate.js  # Replicate API client setup
-│   │   ├── validators.js # Input validation functions
-│   │   └── helpers.js    # Helper functions
-│   │
-│   ├── styles/           # Styling files
-│   │   └── globals.css   # Global styles
-│   │
-│   ├── types/           # TypeScript type definitions (if using TS)
-│   │   └── index.d.ts
-│   │
-│   ├── constants/       # Constants and configuration
-│   │   └── config.js    # App configuration
-│   │
+│   ├── App.jsx           # Main application component
+│   ├── index.jsx         # Application entry point
+│   ├── components/       # Reusable UI components
+│   │   ├── AudioInput/   # Audio input handling components
+│   │   │   ├── AudioInput.jsx          # Main audio input component
+│   │   │   ├── FileUpload.jsx          # Local file upload component
+│   │   │   ├── URLInput.jsx            # URL/Drive/YouTube input component
+│   │   │   └── index.js                # Barrel export file
+│   │   ├── TranscriptionOutput/  # Output display components
+│   │   │   ├── TranscriptionOutput.jsx # Transcription display component
+│   │   │   ├── TranscriptionControls.jsx # Playback/copy controls
+│   │   │   └── index.js                # Barrel export file
+│   │   └── common/       # Common UI components
+│   │       ├── Button.jsx
+│   │       ├── Loading.jsx
+│   │       └── ErrorMessage.jsx
+│   ├── services/        # Business logic and API calls
+│   │   ├── replicate.js # Replicate API integration
+│   │   ├── audioUtils.js # Audio file handling utilities
+│   │   └── validation.js # Input validation functions
 │   ├── hooks/          # Custom React hooks
-│   │   └── useTranscription.js  # Transcription logic hook
-│   │
-│   ├── App.jsx         # Root App component
-│   └── index.jsx       # Entry point
-│
-├── tests/              # Test files
-│   └── TranscriptionApp.test.jsx
-│
-└── config/            # Configuration files
-    ├── jest.config.js
-    └── webpack.config.js
+│   │   ├── useTranscription.js    # Transcription logic hook
+│   │   └── useAudioInput.js       # Audio input handling hook
+│   ├── constants/      # Application constants
+│   │   ├── api.js     # API endpoints and constants
+│   │   └── config.js  # App configuration
+│   ├── styles/        # Styling files
+│   │   ├── index.css  # Global styles
+│   │   └── components/ # Component-specific styles
+│   └── utils/         # Utility functions
+│       ├── formatters.js # Text formatting utilities
+│       └── validators.js # Input validation utilities
+└── tests/             # Test files
+    ├── components/    # Component tests
+    ├── hooks/        # Hook tests
+    └── utils/        # Utility function tests
+    ```
+````
