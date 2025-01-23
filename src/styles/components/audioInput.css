@@ -1,0 +1,24 @@
+.dropzone {
+  @apply border-2 border-dashed rounded-lg p-6
+    transition-colors duration-200 cursor-pointer;
+}
+
+.dropzone-active {
+  @apply border-blue-500 bg-blue-50;
+}
+
+.dropzone-inactive {
+  @apply border-gray-300 hover:border-blue-500 hover:bg-blue-50;
+}
+
+.url-input-wrapper {
+  @apply space-y-4;
+}
+
+.url-input {
+  @apply input-field;
+}
+
+.url-submit {
+  @apply btn-primary w-full sm:w-auto;
+}
